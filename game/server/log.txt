@@ -1,0 +1,3171 @@
+
+
+===VERSION 1.24===
+---GAME START @ 2015-5-28-23-26-40---
+
+wait registration for 30 seconds
+reg: 6666 raise100 
+reg: 5555 raise1 
+reg: 2222 call 
+reg: 4444 fold need_notify 
+reg: 3333 check 
+reg: 7777 random 
+reg: 1111 all_in 
+close registration
+
+-----1 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 2222 2000 8000 
+small blind: 7777 2000 8000 
+big blind: 3333 2000 8000 
+5555 2000 8000 
+6666 2000 8000 
+1111 2000 8000 
+4444 2000 8000 
+/seat 
+blind/ 
+7777: 50 
+3333: 100 
+/blind 
+player 7777:hold/ 
+HEARTS 8 
+HEARTS 6 
+/hold 
+player 3333:hold/ 
+SPADES 9 
+DIAMONDS 8 
+/hold 
+player 5555:hold/ 
+SPADES 10 
+CLUBS 5 
+/hold 
+player 6666:hold/ 
+DIAMONDS J 
+CLUBS J 
+/hold 
+player 1111:hold/ 
+CLUBS 3 
+DIAMONDS K 
+/hold 
+player 4444:hold/ 
+SPADES 7 
+CLUBS 9 
+/hold 
+player 2222:hold/ 
+SPADES 6 
+DIAMONDS 2 
+/hold 
+
+---pre flop round bet---
+valid player: 7, all in player: 0, fold player: 0
+send inquire msg to player 5555 
+inquire/ 
+3333 1900 8000 100 blind 
+7777 1950 8000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 5555: raise 1 
+
+send inquire msg to player 6666 
+inquire/ 
+5555 1800 8000 200 raise 
+3333 1900 8000 100 blind 
+7777 1950 8000 50 blind 
+total pot: 350 
+/inquire 
+recv from player 6666: raise 100 
+
+send inquire msg to player 1111 
+inquire/ 
+6666 1700 8000 300 raise 
+5555 1800 8000 200 raise 
+3333 1900 8000 100 blind 
+7777 1950 8000 50 blind 
+total pot: 650 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 2000 all_in 
+6666 1700 8000 300 raise 
+5555 1800 8000 200 raise 
+3333 1900 8000 100 blind 
+7777 1950 8000 50 blind 
+total pot: 2650 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 2222 
+inquire/ 
+4444 2000 8000 0 fold 
+1111 0 8000 2000 all_in 
+6666 1700 8000 300 raise 
+5555 1800 8000 200 raise 
+3333 1900 8000 100 blind 
+7777 1950 8000 50 blind 
+total pot: 2650 
+/inquire 
+recv from player 2222: call 
+
+send inquire msg to player 7777 
+inquire/ 
+2222 0 8000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 2000 all_in 
+6666 1700 8000 300 raise 
+5555 1800 8000 200 raise 
+3333 1900 8000 100 blind 
+7777 1950 8000 50 blind 
+total pot: 4650 
+/inquire 
+recv from player 7777: check 
+
+send inquire msg to player 3333 
+inquire/ 
+7777 0 8000 2000 all_in 
+2222 0 8000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 2000 all_in 
+6666 1700 8000 300 raise 
+5555 1800 8000 200 raise 
+3333 1900 8000 100 blind 
+total pot: 6600 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 5555 
+inquire/ 
+3333 0 8000 2000 all_in 
+7777 0 8000 2000 all_in 
+2222 0 8000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 2000 all_in 
+6666 1700 8000 300 raise 
+5555 1800 8000 200 raise 
+total pot: 8500 
+/inquire 
+recv from player 5555: raise 1 
+
+send inquire msg to player 6666 
+inquire/ 
+5555 0 8000 2000 all_in 
+3333 0 8000 2000 all_in 
+7777 0 8000 2000 all_in 
+2222 0 8000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 2000 all_in 
+6666 1700 8000 300 raise 
+total pot: 10300 
+/inquire 
+recv from player 6666: raise 100 
+
+flop/ 
+CLUBS K 
+DIAMONDS 7 
+DIAMONDS Q 
+/flop 
+
+---flop round bet---
+valid player: 7, all in player: 6, fold player: 1
+turn/ 
+CLUBS 10 
+/turn 
+
+---turn round bet---
+valid player: 7, all in player: 6, fold player: 1
+river/ 
+DIAMONDS 3 
+/river 
+
+---river round bet---
+valid player: 7, all in player: 6, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 2000 all_in 
+6666 0 8000 2000 all_in 
+5555 0 8000 2000 all_in 
+3333 0 8000 2000 all_in 
+7777 0 8000 2000 all_in 
+2222 0 8000 2000 all_in 
+4444 2000 8000 0 fold 
+total pot: 12000 
+/notify 
+
+---show down---
+showdown/ 
+common/ 
+CLUBS K 
+DIAMONDS 7 
+DIAMONDS Q 
+CLUBS 10 
+DIAMONDS 3 
+/common 
+5: 7777 HEARTS 8 HEARTS 6 HIGH_CARD 
+4: 3333 SPADES 9 DIAMONDS 8 HIGH_CARD 
+3: 5555 SPADES 10 CLUBS 5 ONE_PAIR 
+2: 6666 DIAMONDS J CLUBS J ONE_PAIR 
+1: 1111 CLUBS 3 DIAMONDS K TWO_PAIR 
+6: 2222 SPADES 6 DIAMONDS 2 HIGH_CARD 
+/showdown 
+
+---Allocate pot---
+pot-win/ 
+1111: 12000 
+/pot-win 
+it is player 7777's turn to be button
+
+-----2 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 7777 2000 6000 
+small blind: 3333 2000 6000 
+big blind: 5555 2000 6000 
+6666 2000 6000 
+1111 12000 8000 
+4444 2000 8000 
+2222 2000 6000 
+/seat 
+blind/ 
+3333: 50 
+5555: 100 
+/blind 
+player 3333:hold/ 
+CLUBS 5 
+HEARTS Q 
+/hold 
+player 5555:hold/ 
+DIAMONDS J 
+CLUBS A 
+/hold 
+player 6666:hold/ 
+CLUBS 6 
+HEARTS 3 
+/hold 
+player 1111:hold/ 
+DIAMONDS 10 
+CLUBS 8 
+/hold 
+player 4444:hold/ 
+DIAMONDS 8 
+SPADES 9 
+/hold 
+player 2222:hold/ 
+HEARTS 9 
+DIAMONDS 6 
+/hold 
+player 7777:hold/ 
+SPADES K 
+HEARTS 4 
+/hold 
+
+---pre flop round bet---
+valid player: 7, all in player: 0, fold player: 0
+send inquire msg to player 6666 
+inquire/ 
+5555 1900 6000 100 blind 
+3333 1950 6000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 6666: raise 100 
+
+send inquire msg to player 1111 
+inquire/ 
+6666 1800 6000 200 raise 
+5555 1900 6000 100 blind 
+3333 1950 6000 50 blind 
+total pot: 350 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 12000 all_in 
+6666 1800 6000 200 raise 
+5555 1900 6000 100 blind 
+3333 1950 6000 50 blind 
+total pot: 12350 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 2222 
+inquire/ 
+4444 2000 8000 0 fold 
+1111 0 8000 12000 all_in 
+6666 1800 6000 200 raise 
+5555 1900 6000 100 blind 
+3333 1950 6000 50 blind 
+total pot: 12350 
+/inquire 
+recv from player 2222: call 
+
+send inquire msg to player 7777 
+inquire/ 
+2222 0 6000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 12000 all_in 
+6666 1800 6000 200 raise 
+5555 1900 6000 100 blind 
+3333 1950 6000 50 blind 
+total pot: 14350 
+/inquire 
+recv from player 7777: raise 1 
+
+send inquire msg to player 3333 
+inquire/ 
+7777 0 6000 2000 all_in 
+2222 0 6000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 12000 all_in 
+6666 1800 6000 200 raise 
+5555 1900 6000 100 blind 
+3333 1950 6000 50 blind 
+total pot: 16350 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 5555 
+inquire/ 
+3333 0 6000 2000 all_in 
+7777 0 6000 2000 all_in 
+2222 0 6000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 12000 all_in 
+6666 1800 6000 200 raise 
+5555 1900 6000 100 blind 
+total pot: 18300 
+/inquire 
+recv from player 5555: raise 1 
+
+send inquire msg to player 6666 
+inquire/ 
+5555 0 6000 2000 all_in 
+3333 0 6000 2000 all_in 
+7777 0 6000 2000 all_in 
+2222 0 6000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 12000 all_in 
+6666 1800 6000 200 raise 
+total pot: 20200 
+/inquire 
+recv from player 6666: raise 100 
+
+flop/ 
+DIAMONDS 9 
+SPADES 10 
+CLUBS 9 
+/flop 
+
+---flop round bet---
+valid player: 7, all in player: 6, fold player: 1
+turn/ 
+DIAMONDS Q 
+/turn 
+
+---turn round bet---
+valid player: 7, all in player: 6, fold player: 1
+river/ 
+SPADES Q 
+/river 
+
+---river round bet---
+valid player: 7, all in player: 6, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 12000 all_in 
+6666 0 6000 2000 all_in 
+5555 0 6000 2000 all_in 
+3333 0 6000 2000 all_in 
+7777 0 6000 2000 all_in 
+2222 0 6000 2000 all_in 
+4444 2000 8000 0 fold 
+total pot: 22000 
+/notify 
+
+---show down---
+showdown/ 
+common/ 
+DIAMONDS 9 
+SPADES 10 
+CLUBS 9 
+DIAMONDS Q 
+SPADES Q 
+/common 
+1: 3333 CLUBS 5 HEARTS Q FULL_HOUSE 
+4: 5555 DIAMONDS J CLUBS A TWO_PAIR 
+6: 6666 CLUBS 6 HEARTS 3 TWO_PAIR 
+3: 1111 DIAMONDS 10 CLUBS 8 TWO_PAIR 
+2: 2222 HEARTS 9 DIAMONDS 6 FULL_HOUSE 
+5: 7777 SPADES K HEARTS 4 TWO_PAIR 
+/showdown 
+
+---Allocate pot---
+pot-win/ 
+3333: 12000 
+1111: 10000 
+/pot-win 
+it is player 3333's turn to be button
+
+-----3 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 3333 12000 6000 
+small blind: 5555 2000 4000 
+big blind: 6666 2000 4000 
+1111 10000 8000 
+4444 2000 8000 
+2222 2000 4000 
+7777 2000 4000 
+/seat 
+blind/ 
+5555: 50 
+6666: 100 
+/blind 
+player 5555:hold/ 
+HEARTS 10 
+CLUBS 8 
+/hold 
+player 6666:hold/ 
+SPADES 6 
+SPADES 9 
+/hold 
+player 1111:hold/ 
+SPADES 4 
+HEARTS J 
+/hold 
+player 4444:hold/ 
+DIAMONDS 5 
+DIAMONDS 2 
+/hold 
+player 2222:hold/ 
+HEARTS 6 
+SPADES 3 
+/hold 
+player 7777:hold/ 
+HEARTS 8 
+CLUBS 5 
+/hold 
+player 3333:hold/ 
+SPADES 5 
+CLUBS 10 
+/hold 
+
+---pre flop round bet---
+valid player: 7, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+6666 1900 4000 100 blind 
+5555 1950 4000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 10000 all_in 
+6666 1900 4000 100 blind 
+5555 1950 4000 50 blind 
+total pot: 10150 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 2222 
+inquire/ 
+4444 2000 8000 0 fold 
+1111 0 8000 10000 all_in 
+6666 1900 4000 100 blind 
+5555 1950 4000 50 blind 
+total pot: 10150 
+/inquire 
+recv from player 2222: call 
+
+send inquire msg to player 7777 
+inquire/ 
+2222 0 4000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 10000 all_in 
+6666 1900 4000 100 blind 
+5555 1950 4000 50 blind 
+total pot: 12150 
+/inquire 
+recv from player 7777: raise 10 
+
+send inquire msg to player 3333 
+inquire/ 
+7777 0 4000 2000 all_in 
+2222 0 4000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 10000 all_in 
+6666 1900 4000 100 blind 
+5555 1950 4000 50 blind 
+total pot: 14150 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 5555 
+inquire/ 
+3333 2000 6000 10000 call 
+7777 0 4000 2000 all_in 
+2222 0 4000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 10000 all_in 
+6666 1900 4000 100 blind 
+5555 1950 4000 50 blind 
+total pot: 24150 
+/inquire 
+recv from player 5555: raise 1 
+
+send inquire msg to player 6666 
+inquire/ 
+5555 0 4000 2000 all_in 
+3333 2000 6000 10000 call 
+7777 0 4000 2000 all_in 
+2222 0 4000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 10000 all_in 
+6666 1900 4000 100 blind 
+total pot: 26100 
+/inquire 
+recv from player 6666: raise 100 
+
+flop/ 
+SPADES K 
+HEARTS 2 
+SPADES 8 
+/flop 
+
+---flop round bet---
+valid player: 7, all in player: 5, fold player: 1
+turn/ 
+CLUBS A 
+/turn 
+
+---turn round bet---
+valid player: 7, all in player: 5, fold player: 1
+river/ 
+CLUBS J 
+/river 
+
+---river round bet---
+valid player: 7, all in player: 5, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 10000 all_in 
+6666 0 4000 2000 all_in 
+5555 0 4000 2000 all_in 
+3333 2000 6000 10000 call 
+7777 0 4000 2000 all_in 
+2222 0 4000 2000 all_in 
+4444 2000 8000 0 fold 
+total pot: 28000 
+/notify 
+
+---show down---
+showdown/ 
+common/ 
+SPADES K 
+HEARTS 2 
+SPADES 8 
+CLUBS A 
+CLUBS J 
+/common 
+2: 5555 HEARTS 10 CLUBS 8 ONE_PAIR 
+4: 6666 SPADES 6 SPADES 9 HIGH_CARD 
+1: 1111 SPADES 4 HEARTS J ONE_PAIR 
+5: 2222 HEARTS 6 SPADES 3 HIGH_CARD 
+2: 7777 HEARTS 8 CLUBS 5 ONE_PAIR 
+3: 3333 SPADES 5 CLUBS 10 HIGH_CARD 
+/showdown 
+
+---Allocate pot---
+pot-win/ 
+1111: 28000 
+/pot-win 
+it is player 5555's turn to be button
+
+-----4 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 5555 2000 2000 
+small blind: 6666 2000 2000 
+big blind: 1111 28000 8000 
+4444 2000 8000 
+2222 2000 2000 
+7777 2000 2000 
+3333 2000 6000 
+/seat 
+blind/ 
+6666: 50 
+1111: 100 
+/blind 
+player 6666:hold/ 
+HEARTS A 
+CLUBS J 
+/hold 
+player 1111:hold/ 
+SPADES 7 
+CLUBS 3 
+/hold 
+player 4444:hold/ 
+SPADES J 
+HEARTS K 
+/hold 
+player 2222:hold/ 
+HEARTS 10 
+DIAMONDS 3 
+/hold 
+player 7777:hold/ 
+DIAMONDS A 
+DIAMONDS J 
+/hold 
+player 3333:hold/ 
+CLUBS A 
+DIAMONDS Q 
+/hold 
+player 5555:hold/ 
+HEARTS 4 
+CLUBS 4 
+/hold 
+
+---pre flop round bet---
+valid player: 7, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 27900 8000 100 blind 
+6666 1950 2000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 2222 
+inquire/ 
+4444 2000 8000 0 fold 
+1111 27900 8000 100 blind 
+6666 1950 2000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 2222: call 
+
+send inquire msg to player 7777 
+inquire/ 
+2222 1900 2000 100 call 
+4444 2000 8000 0 fold 
+1111 27900 8000 100 blind 
+6666 1950 2000 50 blind 
+total pot: 250 
+/inquire 
+recv from player 7777: raise 10 
+
+send inquire msg to player 3333 
+inquire/ 
+7777 1800 2000 200 raise 
+2222 1900 2000 100 call 
+4444 2000 8000 0 fold 
+1111 27900 8000 100 blind 
+6666 1950 2000 50 blind 
+total pot: 450 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 5555 
+inquire/ 
+3333 1800 6000 200 call 
+7777 1800 2000 200 raise 
+2222 1900 2000 100 call 
+4444 2000 8000 0 fold 
+1111 27900 8000 100 blind 
+6666 1950 2000 50 blind 
+total pot: 650 
+/inquire 
+recv from player 5555: raise 1 
+
+send inquire msg to player 6666 
+inquire/ 
+5555 1700 2000 300 raise 
+3333 1800 6000 200 call 
+7777 1800 2000 200 raise 
+2222 1900 2000 100 call 
+4444 2000 8000 0 fold 
+1111 27900 8000 100 blind 
+6666 1950 2000 50 blind 
+total pot: 950 
+/inquire 
+recv from player 6666: raise 100 
+
+send inquire msg to player 1111 
+inquire/ 
+6666 1600 2000 400 raise 
+5555 1700 2000 300 raise 
+3333 1800 6000 200 call 
+7777 1800 2000 200 raise 
+2222 1900 2000 100 call 
+4444 2000 8000 0 fold 
+1111 27900 8000 100 blind 
+total pot: 1300 
+/inquire 
+recv from player 1111: all_in 
+
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 28000 all_in 
+6666 1600 2000 400 raise 
+5555 1700 2000 300 raise 
+3333 1800 6000 200 call 
+7777 1800 2000 200 raise 
+2222 1900 2000 100 call 
+4444 2000 8000 0 fold 
+total pot: 29200 
+/notify 
+send inquire msg to player 2222 
+inquire/ 
+4444 2000 8000 0 fold 
+1111 0 8000 28000 all_in 
+6666 1600 2000 400 raise 
+5555 1700 2000 300 raise 
+3333 1800 6000 200 call 
+7777 1800 2000 200 raise 
+2222 1900 2000 100 call 
+total pot: 29200 
+/inquire 
+recv from player 2222: call 
+
+send inquire msg to player 7777 
+inquire/ 
+2222 0 2000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 28000 all_in 
+6666 1600 2000 400 raise 
+5555 1700 2000 300 raise 
+3333 1800 6000 200 call 
+7777 1800 2000 200 raise 
+total pot: 31100 
+/inquire 
+recv from player 7777: raise 100 
+
+send inquire msg to player 3333 
+inquire/ 
+7777 0 2000 2000 all_in 
+2222 0 2000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 28000 all_in 
+6666 1600 2000 400 raise 
+5555 1700 2000 300 raise 
+3333 1800 6000 200 call 
+total pot: 32900 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 5555 
+inquire/ 
+3333 0 6000 2000 all_in 
+7777 0 2000 2000 all_in 
+2222 0 2000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 28000 all_in 
+6666 1600 2000 400 raise 
+5555 1700 2000 300 raise 
+total pot: 34700 
+/inquire 
+recv from player 5555: raise 1 
+
+send inquire msg to player 6666 
+inquire/ 
+5555 0 2000 2000 all_in 
+3333 0 6000 2000 all_in 
+7777 0 2000 2000 all_in 
+2222 0 2000 2000 all_in 
+4444 2000 8000 0 fold 
+1111 0 8000 28000 all_in 
+6666 1600 2000 400 raise 
+total pot: 36400 
+/inquire 
+recv from player 6666: raise 100 
+
+flop/ 
+SPADES 5 
+HEARTS J 
+HEARTS 3 
+/flop 
+
+---flop round bet---
+valid player: 7, all in player: 6, fold player: 1
+turn/ 
+HEARTS 7 
+/turn 
+
+---turn round bet---
+valid player: 7, all in player: 6, fold player: 1
+river/ 
+DIAMONDS 7 
+/river 
+
+---river round bet---
+valid player: 7, all in player: 6, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 28000 all_in 
+6666 0 2000 2000 all_in 
+5555 0 2000 2000 all_in 
+3333 0 6000 2000 all_in 
+7777 0 2000 2000 all_in 
+2222 0 2000 2000 all_in 
+4444 2000 8000 0 fold 
+total pot: 38000 
+/notify 
+
+---show down---
+showdown/ 
+common/ 
+SPADES 5 
+HEARTS J 
+HEARTS 3 
+HEARTS 7 
+DIAMONDS 7 
+/common 
+2: 6666 HEARTS A CLUBS J TWO_PAIR 
+1: 1111 SPADES 7 CLUBS 3 FULL_HOUSE 
+4: 2222 HEARTS 10 DIAMONDS 3 TWO_PAIR 
+2: 7777 DIAMONDS A DIAMONDS J TWO_PAIR 
+5: 3333 CLUBS A DIAMONDS Q ONE_PAIR 
+3: 5555 HEARTS 4 CLUBS 4 TWO_PAIR 
+/showdown 
+
+---Allocate pot---
+pot-win/ 
+1111: 38000 
+/pot-win 
+it is player 6666's turn to be button
+
+-----5 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 6666 2000 0 
+small blind: 1111 38000 8000 
+big blind: 4444 2000 8000 
+2222 2000 0 
+7777 2000 0 
+3333 2000 4000 
+5555 2000 0 
+/seat 
+blind/ 
+1111: 50 
+4444: 100 
+/blind 
+player 1111:hold/ 
+DIAMONDS 2 
+CLUBS 6 
+/hold 
+player 4444:hold/ 
+DIAMONDS 4 
+DIAMONDS 6 
+/hold 
+player 2222:hold/ 
+HEARTS Q 
+HEARTS 7 
+/hold 
+player 7777:hold/ 
+SPADES Q 
+HEARTS K 
+/hold 
+player 3333:hold/ 
+CLUBS 4 
+HEARTS 3 
+/hold 
+player 5555:hold/ 
+SPADES 2 
+HEARTS J 
+/hold 
+player 6666:hold/ 
+HEARTS 8 
+CLUBS 5 
+/hold 
+
+---pre flop round bet---
+valid player: 7, all in player: 0, fold player: 0
+send inquire msg to player 2222 
+inquire/ 
+4444 1900 8000 100 blind 
+1111 37950 8000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 2222: call 
+
+send inquire msg to player 7777 
+inquire/ 
+2222 1900 0 100 call 
+4444 1900 8000 100 blind 
+1111 37950 8000 50 blind 
+total pot: 250 
+/inquire 
+recv from player 7777: raise 1 
+
+send inquire msg to player 3333 
+inquire/ 
+7777 1800 0 200 raise 
+2222 1900 0 100 call 
+4444 1900 8000 100 blind 
+1111 37950 8000 50 blind 
+total pot: 450 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 5555 
+inquire/ 
+3333 1800 4000 200 call 
+7777 1800 0 200 raise 
+2222 1900 0 100 call 
+4444 1900 8000 100 blind 
+1111 37950 8000 50 blind 
+total pot: 650 
+/inquire 
+recv from player 5555: raise 1 
+
+send inquire msg to player 6666 
+inquire/ 
+5555 1700 0 300 raise 
+3333 1800 4000 200 call 
+7777 1800 0 200 raise 
+2222 1900 0 100 call 
+4444 1900 8000 100 blind 
+1111 37950 8000 50 blind 
+total pot: 950 
+/inquire 
+recv from player 6666: raise 100 
+
+send inquire msg to player 1111 
+inquire/ 
+6666 1600 0 400 raise 
+5555 1700 0 300 raise 
+3333 1800 4000 200 call 
+7777 1800 0 200 raise 
+2222 1900 0 100 call 
+4444 1900 8000 100 blind 
+1111 37950 8000 50 blind 
+total pot: 1350 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 38000 all_in 
+6666 1600 0 400 raise 
+5555 1700 0 300 raise 
+3333 1800 4000 200 call 
+7777 1800 0 200 raise 
+2222 1900 0 100 call 
+4444 1900 8000 100 blind 
+total pot: 39300 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 2222 
+inquire/ 
+4444 1900 8000 100 fold 
+1111 0 8000 38000 all_in 
+6666 1600 0 400 raise 
+5555 1700 0 300 raise 
+3333 1800 4000 200 call 
+7777 1800 0 200 raise 
+2222 1900 0 100 call 
+total pot: 39300 
+/inquire 
+recv from player 2222: call 
+
+send inquire msg to player 7777 
+inquire/ 
+2222 0 0 2000 all_in 
+4444 1900 8000 100 fold 
+1111 0 8000 38000 all_in 
+6666 1600 0 400 raise 
+5555 1700 0 300 raise 
+3333 1800 4000 200 call 
+7777 1800 0 200 raise 
+total pot: 41200 
+/inquire 
+recv from player 7777: fold 
+
+send inquire msg to player 3333 
+inquire/ 
+7777 1800 0 200 fold 
+2222 0 0 2000 all_in 
+4444 1900 8000 100 fold 
+1111 0 8000 38000 all_in 
+6666 1600 0 400 raise 
+5555 1700 0 300 raise 
+3333 1800 4000 200 call 
+total pot: 41200 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 5555 
+inquire/ 
+3333 0 4000 2000 all_in 
+7777 1800 0 200 fold 
+2222 0 0 2000 all_in 
+4444 1900 8000 100 fold 
+1111 0 8000 38000 all_in 
+6666 1600 0 400 raise 
+5555 1700 0 300 raise 
+total pot: 43000 
+/inquire 
+recv from player 5555: raise 1 
+
+send inquire msg to player 6666 
+inquire/ 
+5555 0 0 2000 all_in 
+3333 0 4000 2000 all_in 
+7777 1800 0 200 fold 
+2222 0 0 2000 all_in 
+4444 1900 8000 100 fold 
+1111 0 8000 38000 all_in 
+6666 1600 0 400 raise 
+total pot: 44700 
+/inquire 
+recv from player 6666: raise 100 
+
+flop/ 
+DIAMONDS 9 
+CLUBS 7 
+SPADES 5 
+/flop 
+
+---flop round bet---
+valid player: 7, all in player: 5, fold player: 2
+turn/ 
+HEARTS 5 
+/turn 
+
+---turn round bet---
+valid player: 7, all in player: 5, fold player: 2
+river/ 
+HEARTS 2 
+/river 
+
+---river round bet---
+valid player: 7, all in player: 5, fold player: 2
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 38000 all_in 
+6666 0 0 2000 all_in 
+5555 0 0 2000 all_in 
+3333 0 4000 2000 all_in 
+7777 1800 0 200 fold 
+2222 0 0 2000 all_in 
+4444 1900 8000 100 fold 
+total pot: 46300 
+/notify 
+
+---show down---
+showdown/ 
+common/ 
+DIAMONDS 9 
+CLUBS 7 
+SPADES 5 
+HEARTS 5 
+HEARTS 2 
+/common 
+4: 1111 DIAMONDS 2 CLUBS 6 TWO_PAIR 
+2: 2222 HEARTS Q HEARTS 7 TWO_PAIR 
+5: 3333 CLUBS 4 HEARTS 3 ONE_PAIR 
+3: 5555 SPADES 2 HEARTS J TWO_PAIR 
+1: 6666 HEARTS 8 CLUBS 5 THREE_OF_A_KIND 
+/showdown 
+
+---Allocate pot---
+pot-win/ 
+6666: 10300 
+1111: 36000 
+/pot-win 
+it is player 1111's turn to be button
+
+-----6 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 36000 8000 
+small blind: 4444 1900 8000 
+big blind: 7777 1800 0 
+3333 2000 2000 
+6666 10300 0 
+/seat 
+blind/ 
+4444: 50 
+7777: 100 
+/blind 
+player 4444:hold/ 
+CLUBS 3 
+DIAMONDS A 
+/hold 
+player 7777:hold/ 
+DIAMONDS 10 
+SPADES 4 
+/hold 
+player 3333:hold/ 
+HEARTS 5 
+HEARTS Q 
+/hold 
+player 6666:hold/ 
+HEARTS 7 
+DIAMONDS 6 
+/hold 
+player 1111:hold/ 
+DIAMONDS J 
+DIAMONDS 5 
+/hold 
+
+---pre flop round bet---
+valid player: 5, all in player: 0, fold player: 0
+send inquire msg to player 3333 
+inquire/ 
+7777 1700 0 100 blind 
+4444 1850 8000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 6666 
+inquire/ 
+3333 1900 2000 100 call 
+7777 1700 0 100 blind 
+4444 1850 8000 50 blind 
+total pot: 250 
+/inquire 
+recv from player 6666: raise 100 
+
+send inquire msg to player 1111 
+inquire/ 
+6666 10100 0 200 raise 
+3333 1900 2000 100 call 
+7777 1700 0 100 blind 
+4444 1850 8000 50 blind 
+total pot: 450 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 36000 all_in 
+6666 10100 0 200 raise 
+3333 1900 2000 100 call 
+7777 1700 0 100 blind 
+4444 1850 8000 50 blind 
+total pot: 36450 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 7777 
+inquire/ 
+4444 1850 8000 50 fold 
+1111 0 8000 36000 all_in 
+6666 10100 0 200 raise 
+3333 1900 2000 100 call 
+7777 1700 0 100 blind 
+total pot: 36450 
+/inquire 
+recv from player 7777: check 
+
+send inquire msg to player 3333 
+inquire/ 
+7777 0 0 1800 all_in 
+4444 1850 8000 50 fold 
+1111 0 8000 36000 all_in 
+6666 10100 0 200 raise 
+3333 1900 2000 100 call 
+total pot: 38150 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 6666 
+inquire/ 
+3333 0 2000 2000 all_in 
+7777 0 0 1800 all_in 
+4444 1850 8000 50 fold 
+1111 0 8000 36000 all_in 
+6666 10100 0 200 raise 
+total pot: 40050 
+/inquire 
+recv from player 6666: raise 100 
+
+flop/ 
+SPADES 10 
+HEARTS 8 
+HEARTS J 
+/flop 
+
+---flop round bet---
+valid player: 5, all in player: 4, fold player: 1
+turn/ 
+HEARTS A 
+/turn 
+
+---turn round bet---
+valid player: 5, all in player: 4, fold player: 1
+river/ 
+DIAMONDS 8 
+/river 
+
+---river round bet---
+valid player: 5, all in player: 4, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 36000 all_in 
+6666 0 0 10300 all_in 
+3333 0 2000 2000 all_in 
+7777 0 0 1800 all_in 
+4444 1850 8000 50 fold 
+total pot: 50150 
+/notify 
+
+---show down---
+showdown/ 
+common/ 
+SPADES 10 
+HEARTS 8 
+HEARTS J 
+HEARTS A 
+DIAMONDS 8 
+/common 
+3: 7777 DIAMONDS 10 SPADES 4 TWO_PAIR 
+1: 3333 HEARTS 5 HEARTS Q FLUSH 
+4: 6666 HEARTS 7 DIAMONDS 6 ONE_PAIR 
+2: 1111 DIAMONDS J DIAMONDS 5 TWO_PAIR 
+/showdown 
+
+---Allocate pot---
+pot-win/ 
+3333: 7850 
+1111: 42300 
+/pot-win 
+it is player 4444's turn to be button
+
+-----7 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1850 8000 
+small blind: 3333 7850 2000 
+big blind: 1111 42300 8000 
+/seat 
+blind/ 
+3333: 50 
+1111: 100 
+/blind 
+player 3333:hold/ 
+CLUBS J 
+HEARTS 7 
+/hold 
+player 1111:hold/ 
+CLUBS Q 
+DIAMONDS 5 
+/hold 
+player 4444:hold/ 
+CLUBS 5 
+DIAMONDS 6 
+/hold 
+
+---pre flop round bet---
+valid player: 3, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 42200 8000 100 blind 
+3333 7800 2000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 3333 
+inquire/ 
+4444 1850 8000 0 fold 
+1111 42200 8000 100 blind 
+3333 7800 2000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 1111 
+inquire/ 
+3333 7750 2000 100 call 
+4444 1850 8000 0 fold 
+1111 42200 8000 100 blind 
+total pot: 200 
+/inquire 
+recv from player 1111: all_in 
+
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 42300 all_in 
+3333 7750 2000 100 call 
+4444 1850 8000 0 fold 
+total pot: 42400 
+/notify 
+send inquire msg to player 3333 
+inquire/ 
+4444 1850 8000 0 fold 
+1111 0 8000 42300 all_in 
+3333 7750 2000 100 call 
+total pot: 42400 
+/inquire 
+recv from player 3333: check 
+
+flop/ 
+CLUBS 10 
+DIAMONDS 4 
+SPADES Q 
+/flop 
+
+---flop round bet---
+valid player: 3, all in player: 2, fold player: 1
+turn/ 
+SPADES 4 
+/turn 
+
+---turn round bet---
+valid player: 3, all in player: 2, fold player: 1
+river/ 
+DIAMONDS 3 
+/river 
+
+---river round bet---
+valid player: 3, all in player: 2, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 42300 all_in 
+3333 0 2000 7850 all_in 
+4444 1850 8000 0 fold 
+total pot: 50150 
+/notify 
+
+---show down---
+showdown/ 
+common/ 
+CLUBS 10 
+DIAMONDS 4 
+SPADES Q 
+SPADES 4 
+DIAMONDS 3 
+/common 
+2: 3333 CLUBS J HEARTS 7 ONE_PAIR 
+1: 1111 CLUBS Q DIAMONDS 5 TWO_PAIR 
+/showdown 
+
+---Allocate pot---
+pot-win/ 
+1111: 50150 
+/pot-win 
+it is player 3333's turn to be button
+
+-----8 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 3333 2000 0 
+small blind: 1111 50150 8000 
+big blind: 4444 1850 8000 
+/seat 
+blind/ 
+1111: 50 
+4444: 100 
+/blind 
+player 1111:hold/ 
+HEARTS 10 
+HEARTS K 
+/hold 
+player 4444:hold/ 
+SPADES 8 
+DIAMONDS Q 
+/hold 
+player 3333:hold/ 
+DIAMONDS 2 
+DIAMONDS 8 
+/hold 
+
+---pre flop round bet---
+valid player: 3, all in player: 0, fold player: 0
+send inquire msg to player 3333 
+inquire/ 
+4444 1750 8000 100 blind 
+1111 50100 8000 50 blind 
+total pot: 150 
+/inquire 
+recv from player 3333: check 
+
+send inquire msg to player 1111 
+inquire/ 
+3333 1900 0 100 call 
+4444 1750 8000 100 blind 
+1111 50100 8000 50 blind 
+total pot: 250 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 50150 all_in 
+3333 1900 0 100 call 
+4444 1750 8000 100 blind 
+total pot: 50350 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 3333 
+inquire/ 
+4444 1750 8000 100 fold 
+1111 0 8000 50150 all_in 
+3333 1900 0 100 call 
+total pot: 50350 
+/inquire 
+recv from player 3333: check 
+
+flop/ 
+CLUBS K 
+DIAMONDS 3 
+SPADES 6 
+/flop 
+
+---flop round bet---
+valid player: 3, all in player: 2, fold player: 1
+turn/ 
+CLUBS Q 
+/turn 
+
+---turn round bet---
+valid player: 3, all in player: 2, fold player: 1
+river/ 
+SPADES A 
+/river 
+
+---river round bet---
+valid player: 3, all in player: 2, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 50150 all_in 
+3333 0 0 2000 all_in 
+4444 1750 8000 100 fold 
+total pot: 52250 
+/notify 
+
+---show down---
+showdown/ 
+common/ 
+CLUBS K 
+DIAMONDS 3 
+SPADES 6 
+CLUBS Q 
+SPADES A 
+/common 
+1: 1111 HEARTS 10 HEARTS K ONE_PAIR 
+2: 3333 DIAMONDS 2 DIAMONDS 8 HIGH_CARD 
+/showdown 
+
+---Allocate pot---
+pot-win/ 
+1111: 52250 
+/pot-win 
+it is player 1111's turn to be button
+
+-----9 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52250 8000 
+small blind: 4444 1750 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+CLUBS 10 
+DIAMONDS 9 
+/hold 
+player 1111:hold/ 
+DIAMONDS Q 
+SPADES 3 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1700 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52250 all_in 
+4444 1700 8000 50 blind 
+total pot: 52300 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52250 all_in 
+4444 1700 8000 50 fold 
+total pot: 52300 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52300
+pot-win/ 
+1111: 52300 
+/pot-win 
+it is player 4444's turn to be button
+
+-----10 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1700 8000 
+small blind: 1111 52300 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+HEARTS 7 
+SPADES Q 
+/hold 
+player 4444:hold/ 
+CLUBS A 
+HEARTS 6 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52250 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1700 8000 0 fold 
+1111 52250 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52300 all_in 
+4444 1700 8000 0 fold 
+total pot: 52300 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52300
+pot-win/ 
+1111: 52300 
+/pot-win 
+it is player 1111's turn to be button
+
+-----11 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52300 8000 
+small blind: 4444 1700 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+DIAMONDS 6 
+SPADES 3 
+/hold 
+player 1111:hold/ 
+HEARTS J 
+CLUBS 3 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1650 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52300 all_in 
+4444 1650 8000 50 blind 
+total pot: 52350 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52300 all_in 
+4444 1650 8000 50 fold 
+total pot: 52350 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52350
+pot-win/ 
+1111: 52350 
+/pot-win 
+it is player 4444's turn to be button
+
+-----12 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1650 8000 
+small blind: 1111 52350 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+CLUBS Q 
+HEARTS 9 
+/hold 
+player 4444:hold/ 
+CLUBS 3 
+DIAMONDS 3 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52300 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1650 8000 0 fold 
+1111 52300 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52350 all_in 
+4444 1650 8000 0 fold 
+total pot: 52350 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52350
+pot-win/ 
+1111: 52350 
+/pot-win 
+it is player 1111's turn to be button
+
+-----13 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52350 8000 
+small blind: 4444 1650 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+CLUBS 10 
+CLUBS 2 
+/hold 
+player 1111:hold/ 
+DIAMONDS J 
+CLUBS Q 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1600 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52350 all_in 
+4444 1600 8000 50 blind 
+total pot: 52400 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52350 all_in 
+4444 1600 8000 50 fold 
+total pot: 52400 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52400
+pot-win/ 
+1111: 52400 
+/pot-win 
+it is player 4444's turn to be button
+
+-----14 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1600 8000 
+small blind: 1111 52400 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+DIAMONDS 6 
+SPADES A 
+/hold 
+player 4444:hold/ 
+DIAMONDS J 
+HEARTS K 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52350 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1600 8000 0 fold 
+1111 52350 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52400 all_in 
+4444 1600 8000 0 fold 
+total pot: 52400 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52400
+pot-win/ 
+1111: 52400 
+/pot-win 
+it is player 1111's turn to be button
+
+-----15 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52400 8000 
+small blind: 4444 1600 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+CLUBS 10 
+HEARTS A 
+/hold 
+player 1111:hold/ 
+HEARTS 2 
+HEARTS 4 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1550 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52400 all_in 
+4444 1550 8000 50 blind 
+total pot: 52450 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52400 all_in 
+4444 1550 8000 50 fold 
+total pot: 52450 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52450
+pot-win/ 
+1111: 52450 
+/pot-win 
+it is player 4444's turn to be button
+
+-----16 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1550 8000 
+small blind: 1111 52450 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+CLUBS 6 
+SPADES 9 
+/hold 
+player 4444:hold/ 
+DIAMONDS 4 
+DIAMONDS Q 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52400 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1550 8000 0 fold 
+1111 52400 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52450 all_in 
+4444 1550 8000 0 fold 
+total pot: 52450 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52450
+pot-win/ 
+1111: 52450 
+/pot-win 
+it is player 1111's turn to be button
+
+-----17 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52450 8000 
+small blind: 4444 1550 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+HEARTS 3 
+DIAMONDS 3 
+/hold 
+player 1111:hold/ 
+HEARTS A 
+DIAMONDS A 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1500 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52450 all_in 
+4444 1500 8000 50 blind 
+total pot: 52500 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52450 all_in 
+4444 1500 8000 50 fold 
+total pot: 52500 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52500
+pot-win/ 
+1111: 52500 
+/pot-win 
+it is player 4444's turn to be button
+
+-----18 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1500 8000 
+small blind: 1111 52500 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+CLUBS K 
+CLUBS 4 
+/hold 
+player 4444:hold/ 
+CLUBS J 
+CLUBS 6 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52450 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1500 8000 0 fold 
+1111 52450 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52500 all_in 
+4444 1500 8000 0 fold 
+total pot: 52500 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52500
+pot-win/ 
+1111: 52500 
+/pot-win 
+it is player 1111's turn to be button
+
+-----19 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52500 8000 
+small blind: 4444 1500 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+CLUBS 5 
+DIAMONDS 5 
+/hold 
+player 1111:hold/ 
+CLUBS 7 
+HEARTS 9 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1450 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52500 all_in 
+4444 1450 8000 50 blind 
+total pot: 52550 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52500 all_in 
+4444 1450 8000 50 fold 
+total pot: 52550 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52550
+pot-win/ 
+1111: 52550 
+/pot-win 
+it is player 4444's turn to be button
+
+-----20 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1450 8000 
+small blind: 1111 52550 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+HEARTS Q 
+CLUBS A 
+/hold 
+player 4444:hold/ 
+CLUBS J 
+HEARTS 5 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52500 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1450 8000 0 fold 
+1111 52500 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52550 all_in 
+4444 1450 8000 0 fold 
+total pot: 52550 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52550
+pot-win/ 
+1111: 52550 
+/pot-win 
+it is player 1111's turn to be button
+
+-----21 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52550 8000 
+small blind: 4444 1450 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+HEARTS 10 
+HEARTS 2 
+/hold 
+player 1111:hold/ 
+CLUBS 9 
+HEARTS Q 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1400 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52550 all_in 
+4444 1400 8000 50 blind 
+total pot: 52600 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52550 all_in 
+4444 1400 8000 50 fold 
+total pot: 52600 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52600
+pot-win/ 
+1111: 52600 
+/pot-win 
+it is player 4444's turn to be button
+
+-----22 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1400 8000 
+small blind: 1111 52600 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+CLUBS Q 
+SPADES 9 
+/hold 
+player 4444:hold/ 
+SPADES A 
+SPADES 8 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52550 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1400 8000 0 fold 
+1111 52550 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52600 all_in 
+4444 1400 8000 0 fold 
+total pot: 52600 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52600
+pot-win/ 
+1111: 52600 
+/pot-win 
+it is player 1111's turn to be button
+
+-----23 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52600 8000 
+small blind: 4444 1400 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+HEARTS 2 
+CLUBS 4 
+/hold 
+player 1111:hold/ 
+HEARTS 10 
+CLUBS 8 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1350 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52600 all_in 
+4444 1350 8000 50 blind 
+total pot: 52650 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52600 all_in 
+4444 1350 8000 50 fold 
+total pot: 52650 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52650
+pot-win/ 
+1111: 52650 
+/pot-win 
+it is player 4444's turn to be button
+
+-----24 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1350 8000 
+small blind: 1111 52650 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+HEARTS A 
+CLUBS A 
+/hold 
+player 4444:hold/ 
+HEARTS 9 
+SPADES 6 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52600 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1350 8000 0 fold 
+1111 52600 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52650 all_in 
+4444 1350 8000 0 fold 
+total pot: 52650 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52650
+pot-win/ 
+1111: 52650 
+/pot-win 
+it is player 1111's turn to be button
+
+-----25 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52650 8000 
+small blind: 4444 1350 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+CLUBS 7 
+SPADES Q 
+/hold 
+player 1111:hold/ 
+CLUBS 8 
+CLUBS Q 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1300 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52650 all_in 
+4444 1300 8000 50 blind 
+total pot: 52700 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52650 all_in 
+4444 1300 8000 50 fold 
+total pot: 52700 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52700
+pot-win/ 
+1111: 52700 
+/pot-win 
+it is player 4444's turn to be button
+
+-----26 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1300 8000 
+small blind: 1111 52700 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+CLUBS A 
+SPADES A 
+/hold 
+player 4444:hold/ 
+DIAMONDS 5 
+SPADES K 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52650 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1300 8000 0 fold 
+1111 52650 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52700 all_in 
+4444 1300 8000 0 fold 
+total pot: 52700 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52700
+pot-win/ 
+1111: 52700 
+/pot-win 
+it is player 1111's turn to be button
+
+-----27 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52700 8000 
+small blind: 4444 1300 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+HEARTS K 
+CLUBS 4 
+/hold 
+player 1111:hold/ 
+HEARTS 8 
+CLUBS 6 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1250 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52700 all_in 
+4444 1250 8000 50 blind 
+total pot: 52750 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52700 all_in 
+4444 1250 8000 50 fold 
+total pot: 52750 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52750
+pot-win/ 
+1111: 52750 
+/pot-win 
+it is player 4444's turn to be button
+
+-----28 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1250 8000 
+small blind: 1111 52750 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+DIAMONDS 2 
+SPADES K 
+/hold 
+player 4444:hold/ 
+SPADES 6 
+CLUBS 2 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52700 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1250 8000 0 fold 
+1111 52700 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52750 all_in 
+4444 1250 8000 0 fold 
+total pot: 52750 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52750
+pot-win/ 
+1111: 52750 
+/pot-win 
+it is player 1111's turn to be button
+
+-----29 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52750 8000 
+small blind: 4444 1250 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+SPADES Q 
+SPADES 10 
+/hold 
+player 1111:hold/ 
+CLUBS 3 
+SPADES 2 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1200 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52750 all_in 
+4444 1200 8000 50 blind 
+total pot: 52800 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52750 all_in 
+4444 1200 8000 50 fold 
+total pot: 52800 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52800
+pot-win/ 
+1111: 52800 
+/pot-win 
+it is player 4444's turn to be button
+
+-----30 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1200 8000 
+small blind: 1111 52800 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+CLUBS 3 
+HEARTS 7 
+/hold 
+player 4444:hold/ 
+HEARTS 6 
+DIAMONDS K 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52750 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1200 8000 0 fold 
+1111 52750 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52800 all_in 
+4444 1200 8000 0 fold 
+total pot: 52800 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52800
+pot-win/ 
+1111: 52800 
+/pot-win 
+it is player 1111's turn to be button
+
+-----31 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52800 8000 
+small blind: 4444 1200 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+CLUBS 10 
+DIAMONDS 2 
+/hold 
+player 1111:hold/ 
+SPADES 7 
+HEARTS 2 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1150 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52800 all_in 
+4444 1150 8000 50 blind 
+total pot: 52850 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52800 all_in 
+4444 1150 8000 50 fold 
+total pot: 52850 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52850
+pot-win/ 
+1111: 52850 
+/pot-win 
+it is player 4444's turn to be button
+
+-----32 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1150 8000 
+small blind: 1111 52850 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+SPADES 5 
+HEARTS K 
+/hold 
+player 4444:hold/ 
+DIAMONDS 5 
+DIAMONDS 3 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52800 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1150 8000 0 fold 
+1111 52800 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52850 all_in 
+4444 1150 8000 0 fold 
+total pot: 52850 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52850
+pot-win/ 
+1111: 52850 
+/pot-win 
+it is player 1111's turn to be button
+
+-----33 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52850 8000 
+small blind: 4444 1150 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+DIAMONDS 6 
+HEARTS 3 
+/hold 
+player 1111:hold/ 
+CLUBS K 
+DIAMONDS Q 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 1111 
+inquire/ 
+4444 1100 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+send inquire msg to player 4444 
+inquire/ 
+1111 0 8000 52850 all_in 
+4444 1100 8000 50 blind 
+total pot: 52900 
+/inquire 
+recv from player 4444: fold 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52850 all_in 
+4444 1100 8000 50 fold 
+total pot: 52900 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 7 not fold, win all the pot 52900
+pot-win/ 
+1111: 52900 
+/pot-win 
+it is player 4444's turn to be button
+
+-----34 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 4444 1100 8000 
+small blind: 1111 52900 8000 
+/seat 
+blind/ 
+1111: 50 
+/blind 
+player 1111:hold/ 
+SPADES 5 
+DIAMONDS A 
+/hold 
+player 4444:hold/ 
+SPADES 6 
+HEARTS J 
+/hold 
+
+---pre flop round bet---
+valid player: 2, all in player: 0, fold player: 0
+send inquire msg to player 4444 
+inquire/ 
+1111 52850 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 4444: fold 
+
+send inquire msg to player 1111 
+inquire/ 
+4444 1100 8000 0 fold 
+1111 52850 8000 50 blind 
+total pot: 50 
+/inquire 
+recv from player 1111: all_in 
+
+
+---flop round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---turn round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+---river round bet---
+valid player: 2, all in player: 1, fold player: 1
+
+----- notify msg last round -----
+send notify msg to player 4444 
+notify/ 
+1111 0 8000 52900 all_in 
+4444 1100 8000 0 fold 
+total pot: 52900 
+/notify 
+
+--- 1 players not fold, don't need show down---
+
+---Allocate pot---
+Only player at seat 0 not fold, win all the pot 52900
+pot-win/ 
+1111: 52900 
+/pot-win 
+it is player 1111's turn to be button
+
+-----35 Hand-----
+
+----- clean player data in socket -----
+seat/ 
+button: 1111 52900 8000 
+small blind: 4444 1100 8000 
+/seat 
+blind/ 
+4444: 50 
+/blind 
+player 4444:hold/ 
+HEARTS Q 
+DIAMONDS 10 
+/hold 
+player 1111:hold/ 
+SPADES K 
+HEARTS 4
+
+===VERSION 1.24===
+---GAME START @ 2015-5-28-23-27-14---
+
+wait registration for 30 seconds
+close registration
+game-over
+
+===VERSION 1.24===
+---GAME START @ 2015-5-28-23-47-45---
+
+wait registration for 30 seconds
+close registration
+game-over
+
+===VERSION 1.24===
+---GAME START @ 2015-5-28-23-50-35---
+
+wait registration for 30 seconds
+reg: 8888 archer 
+close registration
+game-over
+
+===VERSION 1.24===
+---GAME START @ 2015-5-28-23-51-5---
+
+wait registration for 30 seconds
+close registration
+game-over

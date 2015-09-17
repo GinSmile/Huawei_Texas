@@ -1,0 +1,3 @@
+#!/bin/sh
+
+java game $1 $2 $3 $4 $5

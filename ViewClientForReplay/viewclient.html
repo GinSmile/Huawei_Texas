@@ -1,0 +1,282 @@
+<html>
+<head>    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <title>德州风云</title>
+    <script src="poker.js"></script>
+    <script src="keyboardcontrol.js"></script>
+    <script src="viewclient.js"></script>
+</head>
+<body onload="initialize()" background="ricepaper.png" style="width:1000px;height:800px">
+    <div style="position: absolute; top: 20px; left: 250px;font-size:20pt;">
+    2015华为软件精英挑战赛
+    </div>
+
+    <div style="position: absolute; top: 100px; left: 30px;">
+    <canvas id="Room" width="900" height="605" style="border:5px groove #d3d3d3;">
+    Your browser does not support HTML5 Canvas
+    </canvas>
+    
+    <div style="position: absolute; top: 153px; left: 150px;">
+    <canvas id="Table" width="600" height="300" bgcolor="green" style="border:3px groove #d3d3d3;">    
+    </canvas>    
+    <div style="position: absolute; top: 30px; left: 200px;">
+    <canvas id="Pot" width="200" height="30" style="border:0px solid #d3d3d3;">    
+    </canvas>
+    </div> 
+    </div>
+    
+    <div style="position: absolute; top: 5px; left: 200px;">
+    <canvas id="Seat0" width="100" height="145" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <div style="position: absolute; top: 85px; left: 0px;">
+    <canvas id="Jetton0" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>
+    </div>
+    <div style="position: absolute; top: 115px; left: 0px;">
+    <canvas id="Action0" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>
+    </div>
+    </div>
+    
+    <div style="position: absolute; top: 5px; left: 400px;">
+    <canvas id="Seat1" width="100" height="145" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <div style="position: absolute; top: 85px; left: 0px;">
+    <canvas id="Jetton1" width="100" height="30" style="border:0px solid #d3d3d3;">     
+    </canvas>
+    </div>
+    <div style="position: absolute; top: 115px; left: 0px;">
+    <canvas id="Action1" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>
+    </div>
+    </div>     
+    
+    <div style="position: absolute; top: 5px; left: 600px;">
+    <canvas id="Seat2" width="100" height="145" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <div style="position: absolute; top: 85px; left: 0px;">
+    <canvas id="Jetton2" width="100" height="30" style="border:0px solid #d3d3d3;">     
+    </canvas>
+    </div>
+    <div style="position: absolute; top: 115px; left: 0px;">
+    <canvas id="Action2" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>
+    </div>
+    </div>      
+    
+    <div style="position: absolute; top: 225px; left: 780px;">
+    <canvas id="Seat3" width="100" height="145" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <div style="position: absolute; top: 85px; left: 0px;">
+    <canvas id="Jetton3" width="100" height="30" style="border:0px solid #d3d3d3;">     
+    </canvas>
+    </div>
+    <div style="position: absolute; top: 115px; left: 0px;">
+    <canvas id="Action3" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>          
+    </div>
+    </div> 
+
+    <div style="position: absolute; top: 460px; left: 600px;">
+    <canvas id="Seat4" width="100" height="145" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <div style="position: absolute; top: 85px; left: 0px;">
+    <canvas id="Jetton4" width="100" height="30" style="border:0px solid #d3d3d3;">     
+    </canvas>
+    </div>
+    <div style="position: absolute; top: 115px; left: 0px;">
+    <canvas id="Action4" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>    
+    </div>
+    </div>
+    
+    <div style="position: absolute; top: 460px; left: 400px;">
+    <canvas id="Seat5" width="100" height="145" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <div style="position: absolute; top: 85px; left: 0px;">
+    <canvas id="Jetton5" width="100" height="30" style="border:0px solid #d3d3d3;">     
+    </canvas>
+    </div>
+    <div style="position: absolute; top: 115px; left: 0px;">
+    <canvas id="Action5" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>    
+    </div>
+    </div>    
+
+    <div style="position: absolute; top: 460px; left: 200px;">
+    <canvas id="Seat6" width="100" height="145" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <div style="position: absolute; top: 85px; left: 0px;">
+    <canvas id="Jetton6" width="100" height="30" style="border:0px solid #d3d3d3;">     
+    </canvas>
+    </div>
+    <div style="position: absolute; top: 115px; left: 0px;">
+    <canvas id="Action6" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>    
+    </div>    
+    </div>    
+    
+    <div style="position: absolute; top: 225px; left: 20px;">
+    <canvas id="Seat7" width="100" height="145" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <div style="position: absolute; top: 85px; left: 0px;">
+    <canvas id="Jetton7" width="100" height="30" style="border:0px solid #d3d3d3;">     
+    </canvas>
+    </div>
+    <div style="position: absolute; top: 115px; left: 0px;">
+    <canvas id="Action7" width="100" height="30" style="border:0px solid #d3d3d3;">
+    </canvas>    
+    </div>   
+    </div>        
+    </div>      
+            
+    <div style="position: absolute; top: 100px; left: 960px;">
+    <table id="ScoreBoard" width="270" height="600" border="1" style="border:1px solid #d3d3d3;">
+    <tr>
+    <th id = "HandNo" colspan="12">记分牌</th>
+        <tr>
+            <td style="text-align:center">选手id</td>
+            <td style="text-align:center">选手name</td>
+            <td style="text-align:center">局数</td>
+            <td style="text-align:center">金币</td>
+            <td style="text-align:center">筹码</td>
+        </tr>
+        <tr>
+            <td id="Player0">&nbsp;</td>
+            <td id="Player0Name">&nbsp;</td>
+            <td id="Hand0">&nbsp;</td>            
+            <td id="Score0">&nbsp;</td>
+            <td id="Jettons0">&nbsp;</td>
+            
+        </tr>
+        <tr>
+            <td id="Player1">&nbsp;</td>
+            <td id="Player1Name">&nbsp;</td>
+            <td id="Hand1">&nbsp;</td>            
+            <td id="Score1">&nbsp;</td>
+            <td id="Jettons1">&nbsp;</td>
+        </tr>
+        <tr>
+            <td id="Player2">&nbsp;</td>
+            <td id="Player2Name">&nbsp;</td>
+            <td id="Hand2">&nbsp;</td>            
+            <td id="Score2">&nbsp;</td>
+            <td id="Jettons2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td id="Player3">&nbsp;</td>
+            <td id="Player3Name">&nbsp;</td>
+            <td id="Hand3">&nbsp;</td>            
+            <td id="Score3">&nbsp;</td>
+            <td id="Jettons3">&nbsp;</td>
+        </tr>        
+        <tr>
+            <td id="Player4">&nbsp;</td>
+            <td id="Player4Name">&nbsp;</td>
+            <td id="Hand4">&nbsp;</td>            
+            <td id="Score4">&nbsp;</td>
+            <td id="Jettons4">&nbsp;</td>
+        </tr>                
+        <tr>
+            <td id="Player5">&nbsp;</td>
+            <td id="Player5Name">&nbsp;</td>
+            <td id="Hand5">&nbsp;</td>            
+            <td id="Score5">&nbsp;</td>
+            <td id="Jettons5">&nbsp;</td>
+        </tr>                        
+        <tr>
+            <td id="Player6">&nbsp;</td>
+            <td id="Player6Name">&nbsp;</td>
+            <td id="Hand6">&nbsp;</td>            
+            <td id="Score6">&nbsp;</td>
+            <td id="Jettons6">&nbsp;</td>
+        </tr>                        
+        <tr>
+            <td id="Player7">&nbsp;</td>
+            <td id="Player7Name">&nbsp;</td>
+            <td id="Hand7">&nbsp;</td>            
+            <td id="Score7">&nbsp;</td>
+            <td id="Jettons7">&nbsp;</td>
+        </tr>                                        
+    </tr>
+    </table>    
+    </div>
+               
+    <div id="log" style="position: absolute; top: 750px; left: 980px;">
+    </div>
+    
+    <form style="position: absolute; top: 720px; left: 980px;" id="replay_form" > 
+      <button type="button" id = "replay_b" onclick = "ReplayOnclick()">回放</button>
+    <button type="button" id = "speedup_b" onclick = "SpeedUp()">加速</button>
+    <button type="button" id = "speeddown_b" onclick = "SpeedDown()">减速</button>;
+    </form>
+    
+    
+    <div id="keyboard_control" style="position: absolute; top: 750px; left: 30px;">
+    </div>
+    
+    <div id="raise_extend" style="position: absolute; top: 780px; left: 30px;">    
+    </div>       
+    
+    <audio id="new_hand">
+        <source src="res/new_hand.wav" controls="controls" type="audio/wav">
+    </audio>    
+    
+    <audio id="hold_cards">
+        <source src="res/hold_cards.wav" controls="controls" type="audio/wav">
+    </audio>
+        
+    <audio id="flop_cards">
+        <source src="res/flop_cards.wav" controls="controls" type="audio/wav">
+    </audio>
+    
+    <audio id="turn_card">
+        <source src="res/turn_card.wav" controls="controls" type="audio/wav">
+    </audio>    
+    
+    <audio id="river_card">
+        <source src="res/river_card.wav" controls="controls" type="audio/wav">
+    </audio>        
+    
+    <audio id="call_man">
+        <source src="res/call_man.wav" controls="controls" type="audio/wav">
+    </audio>
+    
+    <audio id="call_woman">
+        <source src="res/call_woman.wav" controls="controls" type="audio/wav">
+    </audio>    
+    
+    <audio id="all_in_man">
+        <source src="res/all_in_man.wav" controls="controls" type="audio/wav">
+    </audio>
+    
+    <audio id="all_in_woman">
+        <source src="res/all_in_woman.wav" controls="controls" type="audio/wav">
+    </audio>    
+    
+    <audio id="raise_man">
+        <source src="res/raise_man.wav" controls="controls" type="audio/wav">
+    </audio>    
+    
+    <audio id="raise_woman">
+        <source src="res/raise_woman.wav" controls="controls" type="audio/wav">
+    </audio>        
+    
+    <audio id="fold_man">
+        <source src="res/fold_man.wav" controls="controls" type="audio/wav">
+    </audio>        
+    
+    <audio id="fold_woman">
+        <source src="res/fold_woman.wav" controls="controls" type="audio/wav">
+    </audio>            
+    
+    <audio id="check">
+        <source src="res/check.wav" controls="controls" type="audio/wav">
+    </audio>            
+    
+    <audio id="win_pot">
+        <source src="res/win_pot.wav" controls="controls" type="audio/wav">
+    </audio>
+        
+</body>
+</html>

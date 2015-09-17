@@ -1,0 +1,2 @@
+
+将replay.txt放在当前目录下，双击viewclient.html即可（请使用firefox浏览器运行）
